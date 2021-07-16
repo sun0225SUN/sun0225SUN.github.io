@@ -1,0 +1,261 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>舔狗日记</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <!-- <link rel="icon" type="image/png" href="assets/images/logo.jpg">
+  <link rel="icon" type="image/png" sizes="144x144" href="assets/images/logo.jpg">
+  <link rel="apple-touch-icon" type="image/png" href="assets/images/logo.jpg"> -->
+  <style>
+    @font-face {
+      font-family: 'MFShangYa';
+      src: url('./assets/font/MFShangYa.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'HYTiaoTiao';
+      src: url('./assets/font/HYTiaoTiao.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+    .border-1 {
+      border-bottom-left-radius: 15px 255px;
+      border-bottom-right-radius: 225px 15px;
+      border-top-left-radius: 255px 15px;
+      border-top-right-radius: 15px 225px
+    }
+    .border-2 {
+      border-bottom-left-radius: 185px 25px;
+      border-bottom-right-radius: 20px 205px;
+      border-top-left-radius: 125px 25px;
+      border-top-right-radius: 10px 205px
+    }
+    .border-3 {
+      border-bottom-left-radius: 225px 15px;
+      border-bottom-right-radius: 15px 255px;
+      border-top-left-radius: 15px 225px;
+      border-top-right-radius: 255px 15px
+    }
+    .border-4 {
+      border-bottom-left-radius: 25px 115px;
+      border-bottom-right-radius: 155px 25px;
+      border-top-left-radius: 15px 225px;
+      border-top-right-radius: 25px 150px
+    }
+    .border-5 {
+      border-bottom-left-radius: 20px 115px;
+      border-bottom-right-radius: 115px 20px;
+      border-top-left-radius: 250px 15px;
+      border-top-right-radius: 25px 80px
+    }
+    .border-6 {
+      border-bottom-left-radius: 15px 225px;
+      border-bottom-right-radius: 20px 205px;
+      border-top-left-radius: 28px 125px;
+      border-top-right-radius: 100px 30px
+    }
+    html,body {margin:0;padding:0;height:100%;width:100%;color:#333;}
+    html {font-size: 13.3333vw;}
+    body {
+      display: flex;
+      flex-direction: column;
+  	  font-family:-apple-system,'Helvetica Neue','Helvetica','Tahoma','Arial','PingFang SC',STHeiTi,'Microsoft Yahei';
+      font-size: 16px;
+      background-color: #f4f5fd;
+  	}
+    mark {
+      background-color: transparent;
+      background-image: -webkit-linear-gradient(#ffe21d, #ffe21d);
+      background-image: -o-linear-gradient(#ffe21d, #ffe21d);
+      background-image: linear-gradient(#ffe21d, #ffe21d);
+      background-position: 0 85%;
+      background-size: 100% 20%;
+      background-repeat: no-repeat;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      padding: .2rem .4rem;
+      margin: 0 0 .45rem;
+      flex-shrink: 0;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,.1);
+    }
+    header img {width:.72rem;height: .72rem;}
+    header h1 {margin:.1rem 0 0;font-size: .64rem;line-height: 105%;font-family: "MFShangYa";font-weight: normal;}
+    header p {font-size: .32rem;margin: .08rem 0 0 auto;font-family: "HYTiaoTiao"}
+    section {
+      font-family: "HYTiaoTiao";
+      margin: auto .4rem;
+      border-width: 2px 5px 4px 3px;
+      border-style: solid;
+      border-color: #03081a;
+      overflow-y: scroll;
+      display: flex;
+      flex-direction: column;
+      background-color: #fff;
+      -webkit-overflow-scrolling: touch;
+      -ms-overflow-style: none;
+    }
+    article img {display: none;}
+    article {
+      font-size: .45rem;
+      margin: 0;
+      padding: .4rem;
+      letter-spacing: 2px;
+      color: #03081A;
+      text-align: justify;
+      flex: 1;
+      overflow-y: scroll;
+      -webkit-overflow-scrolling: touch;
+      -ms-overflow-style: none;
+    }
+    section::-webkit-scrollbar,
+    article::-webkit-scrollbar {display: none;}
+    address {
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+      height: .8rem;
+      margin: 0 .4rem;
+      font-style: normal;
+      color: #8c8c8c;
+      font-size: .32rem;
+    }
+    address time {margin-right: auto;}
+    footer {
+      flex-shrink: 0;
+      text-align: center;
+      padding: 0 0 .5rem;
+      padding-bottom: calc(constant(safe-area-inset-bottom) + .5rem);
+      padding-bottom: calc(env(safe-area-inset-bottom) + .5rem);
+      margin: .45rem 0 0;
+    }
+    button {
+      border: 0 none;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+      width: 1rem;
+      height: 1rem;
+      color: transparent;
+      border-radius: 100%;
+      background-image: url(./assets/images/refresh.gif);
+      background-size: cover;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      box-shadow: 0 0 0.2rem rgba(0,0,0,.2);
+      cursor: pointer;
+      outline: 0;
+    }
+    footer em {display: block;font-style: normal;letter-spacing: 1px;font-size: .16rem;color:#b0b0b0;} 
+    @media (min-width: 750px) {
+      html {font-size: 100px;}
+      section {
+        margin: auto;
+        max-width: 80%;
+        border: 0 none;
+        background-color: transparent;
+        border-radius: none;
+      }
+      article {padding:0 .4rem;}
+      address {justify-content: flex-end;}
+      address time {margin-right: .15rem;}
+    }
+    @media (orientation : landscape) and (min-width: 750px) {
+      header {padding: 10px 20px;}
+      header img {width: 36px;height: 36px;}
+      header h1 {font-size: 32px;margin-top:5px;}
+      header p {font-size: 18px;margin:0 0 0 auto;}
+    }
+  </style>
+<script src="./assets/js/jquery.js"></script>
+<script>
+  var favicon_images = [
+                  './assets/images/favicon/0.jpg',
+                  './assets/images/favicon/1.jpg',
+                  './assets/images/favicon/2.jpg',
+                  './assets/images/favicon/3.jpg',
+                  './assets/images/favicon/4.jpg',
+                  './assets/images/favicon/5.jpg'
+              ],
+  image_counter = 0; // To keep track of the current image
+
+  setInterval(function() {
+      $("link[rel='icon']").remove();
+      $("link[rel='shortcut icon']").remove();
+      $("head").append('<link rel="icon" href="' + favicon_images[image_counter] + '" type="image/jpeg">');
+      
+    // If last image then goto first image
+    // Else go to next image    
+    if(image_counter == favicon_images.length -1)
+          image_counter = 0;
+      else
+          image_counter++;
+  }, 80);
+</script>
+</head>
+
+<body>
+  <header>
+    <img src="./assets/images/logo.gif" alt="logo">
+    <h1>舔狗</h1>
+    <p>我们是狗，舔狗</p>
+  </header>
+  <section class="border-1">
+    <article>
+      昨天你领完红包就把我删了，我陷入久久地沉思。我想这其中一定有什么含义，原来你是在欲擒故纵，嫌我不够爱你。无理取闹的你变得更加可爱了，我会<mark>坚守我对你的爱</mark>的。你放心好啦！今天发工资了，发了1850，给你微信转了520，支付宝1314，还剩下16。给你发了很多消息你没回。剩下16块我在小卖部买了你爱吃的老坛酸菜牛肉面，给你寄过去了。希望你保护好食欲，我去上班了爱你~~
+    </article>
+    <address></address>
+  </section>
+  <footer><button title="点击刷新，再来一篇" onclick="randomSoul()">再来一篇</button></footer>
+<script src="./assets/js/index.js"></script>
+<script>
+  randomSoul();
+  function randomNumBoth(min,max){
+    var range = max - min;
+    var rand = Math.random();
+    var num = min + Math.round(rand * range);
+    return num;
+  }
+  var date = new Date();
+  var year = date.getFullYear().toString(); 
+  var month = (date.getMonth() + 1).toString();
+  var day = date.getDate().toString();
+
+  var city = localStorage.getItem('city') || '';
+  var cloud = localStorage.getItem('cloud') || '';
+  var cond = localStorage.getItem('cond') || '';
+  var dateStart = new Date(localStorage.getItem('date') || new Date());
+  var dayDiff = date.getDate() - dateStart.getDate();
+  if(city == '' || dayDiff >= 1) {
+    $.post(
+      'https://free-api.heweather.net/s6/weather/now?location=auto_ip&key=115e4ece0659467bb560b1f070675980',
+      function(data){
+        var weather = data.HeWeather6[0] || {};
+        city = weather.basic.parent_city || '';
+        cloud = weather.now.fl || ''
+        cond = weather.now.cond_txt || ''
+        localStorage.setItem('city',city);
+        localStorage.setItem('cloud',cloud);
+        localStorage.setItem('cond',cond);
+        localStorage.setItem('date',new Date());
+        renderWeather();
+      },'json'
+    ) // 天气结束
+  } else {
+    renderWeather();
+  }
+  function renderWeather(){
+    var weatherHTML = '<time>'+ year+'-'+month+'-'+day+'</time><span>'+city+'·'+cond+'·'+cloud+'&#8451;</span>'
+    $('address').html(weatherHTML);
+  }
+
+</script>
+</body>
+</html>
